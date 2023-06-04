@@ -1,0 +1,2 @@
+# LavoroFinaPresentazioneLavoroVueVuetifyTypeScriptIlProgettoInsommaSiICompiti
+autoesplicativo
