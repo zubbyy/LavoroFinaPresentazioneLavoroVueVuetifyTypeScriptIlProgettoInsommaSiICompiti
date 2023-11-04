@@ -64,6 +64,7 @@ app.post('/users', (req, res) => {
     client.end;
 })
 
+
 app.put('/users/:id', (req, res) => {
     let user = req.body;
     let updateQuery = `update users
@@ -90,4 +91,16 @@ app.delete('/users/:id', (req, res) => {
         } else { "ERR0R!" + console.log(err.message) }
     })
     client.end
+})
+
+// delete all users
+app.delete('/users/', (req, res) => {
+    client.query(`delete from users`, (err, result) => {
+        if (!err) {
+            res.send(result.rows);
+        } else {
+            console.log("ERROR! " + err.message);
+        }
+    });
+    client.end;
 })
